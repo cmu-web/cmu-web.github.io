@@ -1,0 +1,13 @@
+# The cmu-web org's home page, at https://cmu-web.github.io/. Built with
+# Carnegie Mellon Web Markdown; README.md is the page.
+remote_theme: cmu-web/cmu-web-markdown
+title: CMU Web
+description: Tools for Carnegie Mellon websites and web apps
+cmu:
+  kit: main
+  footer:
+    office: Office of the Vice Provost for Teaching and Learning Innovation
+    links:
+      - title: CMU Web on GitHub
+        url: https://github.com/cmu-web
+exclude: [vendor, Gemfile, Gemfile.lock]
