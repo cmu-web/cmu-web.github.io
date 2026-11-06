@@ -1,6 +1,6 @@
 # The cmu-web org's home page, at https://cmu-web.github.io/. Built with
-# the Carnegie Mellon Web Jekyll Theme; README.md is the page.
-remote_theme: cmu-web/cmu-web-jekyll
+# Jekyll & Plaid; README.md is the page.
+remote_theme: cmu-web/cmu-web-jekyll-and-plaid
 title: CMU Web
 description: Tools for Carnegie Mellon websites and web apps
 cmu:
