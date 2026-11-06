@@ -5,7 +5,7 @@ brand questions, see [brand.cmu.edu](https://www.cmu.edu/brand/).
 
 | Project | What It Does |
 | --- | --- |
-| [Carnegie Mellon Web Kit](https://cmu-web.github.io/cmu-web-kit/) | CSS and JavaScript components for CMS sites and web apps, extending the CMU web template. |
+| [Carnegie Mellon Web Kilt](https://webkilt.andrew.cmu.edu/) | CSS and JavaScript components for CMS sites and web apps, extending the CMU web template. |
 | [Carnegie Mellon Web Jekyll Theme](https://cmu-web.github.io/cmu-web-jekyll/) | A GitHub Pages theme for CMU-styled sites: Markdown docs and full-width pages. This page uses it. |
 | [PlaceMellon](https://placemellon.andrew.cmu.edu/) | Placeholder photos of Carnegie Mellon for mockups and examples. |
 
