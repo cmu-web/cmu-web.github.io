@@ -3,8 +3,9 @@
 remote_theme: cmu-web/cmu-web-jekyll-and-plaid
 title: CMU Web
 description: Tools for Carnegie Mellon websites and web apps
+url: https://cmu-web.github.io
 cmu:
-  kit: 0.1.0
+  preview_alt: "The CMU Web home page: tools for Carnegie Mellon websites and web apps, in CMU's template with a red roof."
   footer:
     office: Office of the Vice Provost for Teaching and Learning Innovation
     links:
