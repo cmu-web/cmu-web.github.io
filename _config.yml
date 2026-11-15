@@ -6,9 +6,4 @@ description: Tools for Carnegie Mellon websites and web apps
 url: https://cmu-web.github.io
 cmu:
   preview_alt: "The CMU Web home page: tools for Carnegie Mellon websites and web apps, in CMU's template with a red roof."
-  footer:
-    office: Office of the Vice Provost for Teaching and Learning Innovation
-    links:
-      - title: CMU Web on GitHub
-        url: https://github.com/cmu-web
 exclude: [vendor, Gemfile, Gemfile.lock, README.md]
