@@ -1,14 +1,5 @@
-# Projects
+# CMU Web
 
-Each one builds on Carnegie Mellon's web template and follows its look; for
-brand questions, see [brand.cmu.edu](https://www.cmu.edu/brand/).
-
-| Project | What It Does |
-| --- | --- |
-| [Carnegie Mellon Web Kilt](https://webkilt.andrew.cmu.edu/) | CSS and JavaScript components for CMS sites and web apps, extending the CMU web template. |
-| [Jekyll & Plaid](https://jekyllandplaid.andrew.cmu.edu/) | A GitHub Pages theme for CMU-styled sites: Markdown docs and full-width pages. This page uses it. |
-| [PlaceMellon](https://placemellon.andrew.cmu.edu/) | Placeholder photos of Carnegie Mellon for mockups and examples. |
-
-Maintained by the Office of the Vice Provost for Teaching and Learning
-Innovation at Carnegie Mellon University. Questions and suggestions are
-welcome in each project's [GitHub issues](https://github.com/cmu-web).
+The home page for the cmu-web organization, at https://cmu-web.github.io/.
+It's built with [Jekyll & Plaid](https://jekyllandplaid.andrew.cmu.edu/);
+`index.html` is the page.

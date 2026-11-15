@@ -1,5 +1,5 @@
 # The cmu-web org's home page, at https://cmu-web.github.io/. Built with
-# Jekyll & Plaid; README.md is the page.
+# Jekyll & Plaid; index.html is the page.
 remote_theme: cmu-web/cmu-web-jekyll-and-plaid
 title: CMU Web
 description: Tools for Carnegie Mellon websites and web apps
@@ -11,4 +11,4 @@ cmu:
     links:
       - title: CMU Web on GitHub
         url: https://github.com/cmu-web
-exclude: [vendor, Gemfile, Gemfile.lock]
+exclude: [vendor, Gemfile, Gemfile.lock, README.md]
