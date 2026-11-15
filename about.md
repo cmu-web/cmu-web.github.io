@@ -1,7 +1,7 @@
 ---
 title: About
-description: What CMU Web is, who it's for and how to take part.
-nav_order: 1
+description: "What CMU Web is, who it's for and how to take part."
+nav_order: 6
 ---
 
 # About CMU Web
