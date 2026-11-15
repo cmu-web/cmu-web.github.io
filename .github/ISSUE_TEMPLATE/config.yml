@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: A problem with one of the tools
+    url: https://github.com/cmu-web
+    about: Open an issue in that tool's own repository.

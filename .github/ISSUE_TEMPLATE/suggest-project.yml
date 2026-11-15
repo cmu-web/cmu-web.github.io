@@ -1,0 +1,30 @@
+name: Suggest a Project
+description: An idea for a new CMU Web tool.
+title: "Idea: "
+labels: [idea]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        CMU Web's tools help people build Carnegie Mellon websites and web apps. Tell us
+        what would help. To report a problem with an existing tool, open an issue in its own
+        repository instead.
+  - type: textarea
+    id: idea
+    attributes:
+      label: The Idea
+      description: What would the tool do?
+    validations:
+      required: true
+  - type: textarea
+    id: who
+    attributes:
+      label: Who It Would Help
+      description: Who would use it, and what do they do today instead?
+    validations:
+      required: true
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples or Links
+      description: Similar tools, pages that show the problem, or anything else useful.
