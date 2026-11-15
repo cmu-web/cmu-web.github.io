@@ -39,7 +39,7 @@ ours to make. For logos, colors and brand rules, see
 Each project's [GitHub repository](https://github.com/cmu-web) has its code
 and docs. To report a problem or suggest a change, open an issue there or
 send a pull request. For an idea for a new tool,
-[suggest a project](https://github.com/cmu-web/cmu-web.github.io/issues/new?template=suggest-project.yml).
+[suggest a project](https://github.com/cmu-web/.github/issues/new?template=suggest-project.yml).
 
 ## Licenses
 
