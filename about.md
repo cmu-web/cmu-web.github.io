@@ -2,6 +2,7 @@
 title: About
 description: "What CMU Web is, who it's for and how to take part."
 nav_order: 7
+nav_secondary: true
 ---
 
 # About CMU Web
@@ -39,7 +40,7 @@ ours to make. For logos, colors and brand rules, see
 Each project's [GitHub repository](https://github.com/cmu-web) has its code
 and docs. To report a problem or suggest a change, open an issue there or
 send a pull request. For an idea for a new tool,
-[suggest a project](https://github.com/cmu-web/.github/issues/new?template=suggest-project.yml).
+[suggest a service](suggest.html).
 
 ## Licenses
 
