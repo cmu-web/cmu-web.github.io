@@ -22,7 +22,7 @@ nav_order: 1
 - **No build step.** It's two stylesheets and a browser script, plain CSS and
   JavaScript, with no required framework.
 - **Every example ready to copy,** with steps for Cascade and other CMSs, and
-  notes for React, Svelte, Vue, Rails and Django.
+  notes for React, Astro, Django, Rails, Svelte and Vue.
 - **Writing conventions,** so the words on the page feel at home at CMU too.
 
 ## Who It's For
@@ -31,7 +31,7 @@ Anyone building a CMU website or app: a Cascade site, a custom web app or a quic
 
 ## For AI Coding Assistants
 
-Carnegie Mellon Web Kilt has an MCP server, so an assistant like Claude, Copilot or Cursor can
+The Web Kilt has an MCP server, so an assistant like Claude, Copilot or Cursor can
 use it while it works. Add it as a remote server in the assistant's settings:
 
 | Setting | Value |
@@ -40,10 +40,10 @@ use it while it works. Add it as a remote server in the assistant's settings:
 | URL | `https://webkilt.andrew.cmu.edu/mcp` |
 | Authentication | None |
 
-Ask it to set up the Web Kilt for your project. It gives installation steps for your kind of site or app, finds components and their markup, supplies the writing conventions and checks your HTML for common mistakes.
+Ask it to set up the Web Kilt for your project. It gives installation steps for your kind of site or app, finds components and their markup, supplies the writing conventions and the link preview guidance, and checks your HTML for common mistakes.
 
 ## Code and License
 
-The code is on GitHub at [cmu-web-kilt](https://github.com/cmu-web/cmu-web-kilt), under
+The code is on GitHub at [cmu-web-kilt](https://github.com/cmu-web/cmu-web-kilt){: .external}, under
 the BSD 3-Clause License. CMU's names, marks and artwork aren't covered by
 that license. To report a problem or suggest something, open an issue there.

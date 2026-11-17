@@ -1,7 +1,7 @@
 ---
 title: Jekyll & Plaid
 description: "A GitHub Pages theme that turns plain Markdown into pages in CMU style."
-nav_order: 3
+nav_order: 4
 ---
 
 # Jekyll & Plaid
@@ -20,8 +20,8 @@ nav_order: 3
   header, navigation, breadcrumbs and footer.
 - **Tables, code and callouts** come out styled: striped tables, code boxes
   with a copy button, and labeled notes and warnings.
-- **Full-width pages** when you want them: heroes, color bands, cards and
-  sidebars from the template's own sections.
+- **Full-width pages** when you want them: heroes, sections with a background
+  color, cards and sidebars, from the template's own markup.
 - **Two lines to start:** name the theme in `_config.yml` and turn on GitHub
   Pages.
 
@@ -31,6 +31,6 @@ Anyone with docs or a small site in a GitHub repository: a project, a lab, an of
 
 ## Code and License
 
-The code is on GitHub at [cmu-web-jekyll-and-plaid](https://github.com/cmu-web/cmu-web-jekyll-and-plaid), under
+The code is on GitHub at [cmu-web-jekyll-and-plaid](https://github.com/cmu-web/cmu-web-jekyll-and-plaid){: .external}, under
 the BSD 3-Clause License. CMU's names, marks and artwork aren't covered by
 that license. To report a problem or suggest something, open an issue there.

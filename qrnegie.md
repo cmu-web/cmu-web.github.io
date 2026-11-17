@@ -1,7 +1,7 @@
 ---
 title: QRnegie
 description: "QR codes with Carnegie Mellon character, from Scotty portraits to campus landmarks."
-nav_order: 5
+nav_order: 3
 ---
 
 # QRnegie
@@ -44,6 +44,6 @@ An assistant can make a QR code in any style and look up which styles and sizes 
 
 ## Code and License
 
-The code is on GitHub at [cmu-web-qrnegie](https://github.com/cmu-web/cmu-web-qrnegie), under
+The code is on GitHub at [cmu-web-qrnegie](https://github.com/cmu-web/cmu-web-qrnegie){: .external}, under
 the BSD 3-Clause License. CMU's names, marks and artwork aren't covered by
 that license. To report a problem or suggest something, open an issue there.

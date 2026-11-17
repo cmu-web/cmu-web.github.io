@@ -16,12 +16,13 @@ apps that look and work like cmu.edu.
   that extend CMU's web template, for CMS sites and web apps.
 - **Jekyll & Plaid** is a GitHub Pages theme built on the Kilt, for docs and
   small sites written in Markdown.
-- **PlaceMellon, QRnegie and FencePost** handle the pieces around a site:
-  placeholder photos for mockups, QR codes for print, and link previews for
-  sharing.
+- **Forbes & Moreword** is a WordPress theme built on the Kilt, with its
+  components ready to insert as patterns.
+- **PlaceMellon and QRnegie** handle the pieces around a site: placeholder
+  photos for mockups and QR codes for print.
 
-The Kilt, QRnegie and FencePost also have MCP servers, so AI coding
-assistants can look up components, make QR codes and check link previews.
+The Kilt and QRnegie also have MCP servers, so AI coding assistants can look
+up components and conventions and make QR codes.
 
 ## Who It's For
 
@@ -33,11 +34,11 @@ it. Start with the one tool that solves today's problem.
 
 The tools follow the university's web template, but brand decisions aren't
 ours to make. For logos, colors and brand rules, see
-[brand.cmu.edu](https://brand.cmu.edu/).
+[brand.cmu.edu](https://brand.cmu.edu/){: .external}.
 
 ## Contributing
 
-Each project's [GitHub repository](https://github.com/cmu-web) has its code
+Each project's [GitHub repository](https://github.com/cmu-web){: .external} has its code
 and docs. To report a problem or suggest a change, open an issue there or
 send a pull request. For an idea for a new tool,
 [suggest a service](suggest.html).
