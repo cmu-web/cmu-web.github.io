@@ -18,11 +18,13 @@ apps that look and work like cmu.edu.
   small sites written in Markdown.
 - **Forbes & Moreword** is a WordPress theme built on the Kilt, with its
   components ready to insert as patterns.
-- **PlaceMellon and QRnegie** handle the pieces around a site: placeholder
-  photos for mockups and QR codes for print.
+- **PlaceMellon, QRnegie and FencePost** handle the pieces around a site:
+  placeholder photos for mockups, QR codes for print and link previews for
+  sharing.
 
-The Kilt and QRnegie also have MCP servers, so AI coding assistants can look
-up components and conventions and make QR codes.
+The Kilt, QRnegie and FencePost also have MCP servers, so AI coding
+assistants can look up components and conventions, make QR codes and check
+link previews.
 
 ## Who It's For
 

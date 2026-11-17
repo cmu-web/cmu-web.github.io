@@ -1,7 +1,7 @@
 ---
 title: Forbes & Moreword
 description: "A WordPress theme in CMU style, with the Web Kilt's components ready to insert as patterns."
-nav_order: 5
+nav_order: 6
 ---
 
 # Forbes & Moreword
