@@ -2,3 +2,5 @@ _site/
 .jekyll-cache/
 vendor/
 .bundle/
+# Written by tools/gallery.py at build time from each project's gallery.json
+_data/gallery.json

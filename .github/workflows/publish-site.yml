@@ -1,0 +1,54 @@
+name: Publish Site
+
+# Builds the CMU Web home page (https://cmu-web.github.io/) with Jekyll and
+# publishes it to GitHub Pages. First it merges each project's
+# docs/gallery.json into the Gallery (tools/gallery.py); a project whose file
+# can't be read is skipped, never emptying the page.
+
+on:
+  push:
+    branches: [main]
+  # The projects' galleries change in their own repositories, so the merged
+  # Gallery is rebuilt each morning to pick them up
+  schedule:
+    - cron: "17 11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      # Each project's gallery, merged into _data/gallery.json
+      - run: python3 tools/gallery.py
+      - uses: ruby/setup-ruby@b3aaceaef7e0ee231b499e7b5f49c03fc1d32199 # v1.338.0
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+      # The github-pages gem builds it, as GitHub Pages' own build did
+      - run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+          PAGES_REPO_NWO: ${{ github.repository }}
+          JEKYLL_GITHUB_TOKEN: ${{ github.token }}
+      - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1

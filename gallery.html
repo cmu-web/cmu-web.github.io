@@ -5,71 +5,29 @@ description: "Carnegie Mellon sites, apps and QR codes built with CMU Web."
 nav_order: 6
 nav_secondary: true
 ---
-<div class="grid column3 grey boxes" id="gallery">
+<div class="grid column3 grey boxes cmu-cards-links" id="gallery">
   <h1 class="sr-only">Gallery</h1>
   <p class="cmu-grid-full">
     Carnegie Mellon sites and apps built with CMU Web. Each one is labeled with what it uses.
   </p>
-  <div>
-    <p class="cmu-label">Jekyll &amp; Plaid</p>
+  {%- comment -%} Each project's gallery.json, merged by tools/gallery.py at build time {%- endcomment %}
+  {%- for e in site.data.gallery %}
+  <div id="{{ e.id | escape }}">
+    <p class="cmu-label">{{ e.project | escape }}</p>
     <figure class="cmu-shot cmu-shot--browser">
-      <a href="https://jekyllandplaid.andrew.cmu.edu/" tabindex="-1" aria-hidden="true"
-        ><img src="https://jekyllandplaid.andrew.cmu.edu/0/images/cmu-web-preview.webp" alt="The Jekyll &amp; Plaid documentation home page." width="1040" height="656" loading="lazy"
+      {%- if e.image %}
+      <a href="{{ e.url | escape }}" tabindex="-1" aria-hidden="true"
+        ><img src="{{ e.image | escape }}" alt="{{ e.alt | escape }}" width="1040" height="656" loading="lazy"
       /></a>
+      {%- else %}
+      <img src="https://placemellon.andrew.cmu.edu/1040/656.svg?solid&amp;text" alt="{{ e.alt | escape }}" width="1040" height="656" loading="lazy" />
+      {%- endif %}
     </figure>
-    <h2><a class="external" href="https://jekyllandplaid.andrew.cmu.edu/">Jekyll &amp; Plaid</a></h2>
-    <p>The theme's own docs, written in Markdown and built by GitHub Pages.</p>
+    <h2>{{ e.name | escape }}</h2>
+    <p>{{ e.summary | escape }}</p>
+    <p><a class="external" href="{{ e.url | escape }}">{{ e.link | escape }}</a>{% if e.login %} [login&nbsp;required]{% endif %}</p>
   </div>
-  <div id="minecraft">
-    <p class="cmu-label">Web Kilt</p>
-    <figure class="cmu-shot cmu-shot--browser">
-      <a href="https://minecraft.alumni.cmu.edu/" tabindex="-1" aria-hidden="true"
-        ><img src="https://webkilt.andrew.cmu.edu/0/images/gallery-minecraft.jpg" alt="The Minecraft Multiplayer Server home page: a slideshow of the CMU letters built in Minecraft." width="1040" height="656" loading="lazy"
-      /></a>
-    </figure>
-    <h2><a class="external" href="https://minecraft.alumni.cmu.edu/">Minecraft Multiplayer Server</a></h2>
-    <p>How to join Carnegie Mellon's Minecraft server, and its events. Built from the template and the Web Kilt, with no CSS of its own.</p>
-  </div>
-  <div>
-    <p class="cmu-label">Web Kilt</p>
-    <figure class="cmu-shot cmu-shot--browser">
-      <a href="https://placemellon.andrew.cmu.edu/" tabindex="-1" aria-hidden="true"
-        ><img src="https://placemellon.andrew.cmu.edu/images/cmu-web-preview.webp" alt="The PlaceMellon home page." width="1040" height="656" loading="lazy"
-      /></a>
-    </figure>
-    <h2><a class="external" href="https://placemellon.andrew.cmu.edu/">PlaceMellon</a></h2>
-    <p>Placeholder photos of Carnegie Mellon at any size. Its docs use only the template and the Web Kilt.</p>
-  </div>
-  <div id="binder">
-    <p class="cmu-label">Web Kilt</p>
-    <figure class="cmu-shot cmu-shot--browser">
-      <a href="https://binder.springcarnival.org/" tabindex="-1" aria-hidden="true"
-        ><img src="https://webkilt.andrew.cmu.edu/0/images/gallery-binder.jpg" alt="The Spring Carnival Binder home page: a countdown to Move On beside a red Sign in to Binder box." width="1040" height="656" loading="lazy"
-      /></a>
-    </figure>
-    <h2><a class="external" href="https://binder.springcarnival.org/">Spring Carnival Binder</a></h2>
-    <p>Spring Carnival's booth and operations app, where organizations watch the safety video and sign the waiver.</p>
-  </div>
-  <div id="syllabus-registry">
-    <p class="cmu-label">Web Kilt</p>
-    <figure class="cmu-shot cmu-shot--browser">
-      <a href="https://syllabus-registry.tli.cmu.edu/" tabindex="-1" aria-hidden="true"
-        ><img src="https://webkilt.andrew.cmu.edu/0/images/gallery-syllabus-registry.jpg" alt="The Syllabus Registry home page: a search box over a table of course sections with status pills." width="1040" height="656" loading="lazy"
-      /></a>
-    </figure>
-    <h2><a class="external" href="https://syllabus-registry.tli.cmu.edu/">Syllabus Registry</a></h2>
-    <p>Where CMU instructors post their syllabi and students find them. The Web Kilt started here.</p>
-  </div>
-  <div>
-    <p class="cmu-label">Web Kilt</p>
-    <figure class="cmu-shot cmu-shot--browser">
-      <a href="https://www.cmu.edu/syllabusregistry/" tabindex="-1" aria-hidden="true"
-        ><img src="https://webkilt.andrew.cmu.edu/0/images/gallery-syllabus-registry-info.jpg" alt="The Syllabus Registry's Cascade home page: a hero with a Sign in to the Syllabus Registry button." width="1040" height="656" loading="lazy"
-      /></a>
-    </figure>
-    <h2><a class="external" href="https://www.cmu.edu/syllabusregistry/">Syllabus Registry (Service Description)</a></h2>
-    <p>The Syllabus Registry's Cascade site, built to match the app.</p>
-  </div>
+  {%- endfor %}
   <div id="yours">
     <p class="cmu-label">Web Kilt or Jekyll &amp; Plaid</p>
     <figure class="cmu-shot cmu-shot--browser">
