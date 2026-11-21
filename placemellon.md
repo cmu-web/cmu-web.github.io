@@ -1,5 +1,6 @@
 ---
 title: PlaceMellon
+repo: cmu-web-placemellon
 description: "Placeholder photos of Carnegie Mellon at any size, for mockups and prototypes."
 nav_order: 2
 ---

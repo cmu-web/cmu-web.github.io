@@ -1,7 +1,8 @@
 ---
 title: Jekyll & Plaid
+repo: cmu-web-jekyll-and-plaid
 description: "A GitHub Pages theme that turns plain Markdown into pages in CMU style."
-nav_order: 5
+nav_exclude: true
 ---
 
 <p class="cmu-eyebrow">Site · Jekyll</p>

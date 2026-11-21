@@ -1,5 +1,6 @@
 ---
 title: QRnegie
+repo: cmu-web-qrnegie
 description: "QR codes with Carnegie Mellon character, from Scotty portraits to campus landmarks."
 nav_order: 3
 ---

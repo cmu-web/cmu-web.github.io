@@ -2,10 +2,10 @@
 # Jekyll & Plaid; index.html is the page.
 remote_theme: cmu-web/cmu-web-jekyll-and-plaid
 title: CMU Web
-description: Plaid Over IP
+description: Plaid over IP
 url: https://cmu-web.github.io
 cmu:
   # Each project page links its own repository
   github_link: false
-  preview_alt: "The CMU Web home page: Plaid Over IP, then Tools and Themes, with screenshots of the Web Kilt, PlaceMellon, QRnegie and FencePost."
-exclude: [vendor, Gemfile, Gemfile.lock, README.md]
+  preview_alt: "The CMU Web home page: Plaid over IP, then Tools of the Trade, with screenshots of the Web Kilt, PlaceMellon, QRnegie and FencePost."
+exclude: [vendor, Gemfile, Gemfile.lock, README.md, tools]

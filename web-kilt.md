@@ -1,5 +1,6 @@
 ---
 title: Web Kilt
+repo: cmu-web-kilt
 description: "Components and working examples that fit Carnegie Mellon's web template, for CMS sites and web apps."
 nav_order: 1
 ---
@@ -19,8 +20,8 @@ nav_order: 1
 - **Starts with the template.** It documents the markup CMU's template
   already styles, then adds components where you need more: page layouts,
   callouts, status pills, dialogs, file drop zones and more.
-- **No build step.** It's two stylesheets and a browser script, plain CSS and
-  JavaScript, with no required framework.
+- **Lightweight, with no build step.** Plain CSS and JavaScript, with no
+  required framework.
 - **Every example ready to copy,** with steps for Cascade and other CMSs, and
   notes for React, Astro, Django, Rails, Svelte and Vue.
 - **Writing conventions,** so the words on the page feel at home at CMU too.
@@ -34,11 +35,11 @@ Anyone building a CMU website or app: a Cascade site, a custom web app or a quic
 The Web Kilt has an MCP server, so an assistant like Claude, Copilot or Cursor can
 use it while it works. Add it as a remote server in the assistant's settings:
 
-| Setting | Value |
-| --- | --- |
-| Transport | Streamable HTTP |
-| URL | `https://webkilt.andrew.cmu.edu/mcp` |
-| Authentication | None |
+| Setting        | Value                                |
+| -------------- | ------------------------------------ |
+| Transport      | Streamable HTTP                      |
+| URL            | `https://webkilt.andrew.cmu.edu/mcp` |
+| Authentication | None                                 |
 
 Ask it to set up the Web Kilt for your project. It gives installation steps for your kind of site or app, finds components and their markup, supplies the writing conventions and the link preview guidance, and checks your HTML for common mistakes.
 

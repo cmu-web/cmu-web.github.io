@@ -1,0 +1,20 @@
+{%- comment -%}
+  One project's card, from _data/projects.json (tools/projects.py). The card
+  links to the project's page on this site when one names it with repo:, or
+  else to the project's own site.
+{%- endcomment -%}
+{%- assign p = include.project -%}
+{%- assign home = site.pages | where: "repo", p.repo | first -%}
+{%- if home -%}{%- assign href = home.url | remove_first: "/" -%}{%- assign external = "" -%}{%- else -%}{%- assign href = p.url -%}{%- assign external = ' class="external"' -%}{%- endif %}
+  <div>
+    <figure class="cmu-shot cmu-shot--browser">
+      <a href="{{ href | escape }}" tabindex="-1" aria-hidden="true"
+        ><img src="{{ p.image | escape }}" alt="{{ p.alt | escape }}" width="1040" height="656"
+      /></a>
+    </figure>
+    {%- if p.eyebrow != "" %}
+    <p class="cmu-eyebrow">{{ p.eyebrow | escape }}</p>
+    {%- endif %}
+    <h2><a{{ external }} href="{{ href | escape }}">{{ p.name | escape }}</a></h2>
+    <p>{{ p.description | escape }}</p>
+  </div>

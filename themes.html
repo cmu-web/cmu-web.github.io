@@ -1,0 +1,15 @@
+---
+layout: sections
+title: Themes
+description: "Themes in CMU style for whole sites, each built on the Web Kilt."
+nav_order: 6
+---
+<div class="grid column4 grey boxes" id="themes">
+  <h1 class="cmu-grid-full">Themes</h1>
+  <p class="cmu-grid-full">Themes in CMU style for whole sites, each built on the Web Kilt.</p>
+  {%- comment -%} Each theme, from _data/projects.json (tools/projects.py) {%- endcomment %}
+  {%- assign themes = site.data.projects | where_exp: "p", "p.kind != 'tool'" %}
+  {%- for project in themes %}
+  {%- include project-card.html project=project %}
+  {%- endfor %}
+</div>

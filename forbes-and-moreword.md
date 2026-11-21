@@ -1,7 +1,8 @@
 ---
 title: Forbes & Moreword
+repo: cmu-web-forbes-and-moreword
 description: "A WordPress theme in CMU style, with the Web Kilt's components ready to insert as patterns."
-nav_order: 6
+nav_exclude: true
 ---
 
 <p class="cmu-eyebrow">Site · WordPress</p>

@@ -1,17 +1,19 @@
 name: Publish Site
 
 # Builds the CMU Web home page (https://cmu-web.github.io/) with Jekyll and
-# publishes it to GitHub Pages. First it merges each project's
-# docs/gallery.json into the Gallery (tools/gallery.py); a project whose file
-# can't be read is skipped, never emptying the page.
+# publishes it to GitHub Pages. First it lists the projects from their own
+# repositories (tools/projects.py) and merges each project's
+# docs/gallery.json into the Gallery (tools/gallery.py); a project that can't
+# be read is skipped, never emptying a page.
 
 on:
   push:
     branches: [main]
-  # The projects' galleries change in their own repositories, so the merged
-  # Gallery is rebuilt each morning to pick them up
+  # The projects' descriptions, websites and galleries change in their own
+  # repositories, so the site rebuilds every hour: a description edited on
+  # GitHub shows here, and in every More From CMU Web section, within the hour
   schedule:
-    - cron: "17 11 * * *"
+    - cron: "17 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -34,6 +36,10 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      # The projects, from their repositories, into _data/projects.json
+      - run: python3 tools/projects.py
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
       # Each project's gallery, merged into _data/gallery.json
       - run: python3 tools/gallery.py
       - uses: ruby/setup-ruby@20eb24b0d509e2b9ed9b6d42ddfeb992915e0564 # v1.341.0

@@ -1,5 +1,6 @@
 ---
 title: FencePost
+repo: cmu-web-fencepost
 description: "Link previews for Carnegie Mellon websites: the image and the Open Graph tags."
 nav_order: 4
 ---

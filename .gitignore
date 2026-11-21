@@ -4,3 +4,5 @@ vendor/
 .bundle/
 # Written by tools/gallery.py at build time from each project's gallery.json
 _data/gallery.json
+# Written by tools/projects.py at build time from the projects' repositories
+_data/projects.json
