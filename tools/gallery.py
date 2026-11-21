@@ -7,7 +7,7 @@ entry with its project and writes the merged list, sorted by name, for
 gallery.html. A project whose file can't be read is skipped with a warning,
 so one missing file never empties the gallery.
 
-    python3 tools/gallery.py              fetch from jsDelivr
+    python3 tools/gallery.py              fetch from GitHub
     python3 tools/gallery.py --local ..   read sibling checkouts instead
 """
 
@@ -39,7 +39,8 @@ OUT = Path(__file__).resolve().parent.parent / "_data" / "gallery.json"
 def load(repo, branch, local):
     if local:
         return json.loads((Path(local) / repo / "docs" / "gallery.json").read_text())
-    url = f"https://cdn.jsdelivr.net/gh/cmu-web/{repo}@{branch}/docs/gallery.json"
+    # Straight from GitHub, not a CDN, so a pushed change shows on the next build
+    url = f"https://raw.githubusercontent.com/cmu-web/{repo}/{branch}/docs/gallery.json"
     with urllib.request.urlopen(url, timeout=30) as response:
         return json.load(response)
 
