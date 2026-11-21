@@ -89,6 +89,14 @@ COMING = [
 OUT = Path(__file__).resolve().parent.parent / "_data" / "projects.json"
 
 
+def checkout(local, repo):
+    """A sibling checkout, or one in the themes folder beside them"""
+    for path in (Path(local) / repo, Path(local) / "themes" / repo):
+        if path.is_dir():
+            return path
+    return Path(local) / repo
+
+
 def get(url, raw=False):
     headers = {
         "Accept": "application/vnd.github+json",
@@ -116,7 +124,7 @@ def exists(url):
 
 def readme(repo, local):
     if local:
-        return (Path(local) / repo["name"] / "README.md").read_text()
+        return (checkout(local, repo["name"]) / "README.md").read_text()
     # Raw files don't count against the API's rate limit
     return get(
         f"https://raw.githubusercontent.com/{ORG}/{repo['name']}/{repo['default_branch']}/README.md",

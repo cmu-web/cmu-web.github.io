@@ -48,9 +48,17 @@ PILLS = {
 OUT = Path(__file__).resolve().parent.parent / "_data" / "gallery.json"
 
 
+def checkout(local, repo):
+    """A sibling checkout, or one in the themes folder beside them"""
+    for path in (Path(local) / repo, Path(local) / "themes" / repo):
+        if path.is_dir():
+            return path
+    return Path(local) / repo
+
+
 def load(repo, branch, local):
     if local:
-        return json.loads((Path(local) / repo / "docs" / "gallery.json").read_text())
+        return json.loads((checkout(local, repo) / "docs" / "gallery.json").read_text())
     # Straight from GitHub, not a CDN, so a pushed change shows on the next build
     url = f"https://raw.githubusercontent.com/cmu-web/{repo}/{branch}/docs/gallery.json"
     with urllib.request.urlopen(url, timeout=30) as response:
