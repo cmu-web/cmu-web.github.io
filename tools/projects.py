@@ -63,6 +63,28 @@ COMING = [
         "alt": "Placeholder for The Cut & Paste's home page.",
         "repository": "",
     },
+    {
+        "repo": "cmu-web-docs-and-donner",
+        "name": "Docs & Donner",
+        "description": "An MkDocs theme in CMU style, for docs written in Markdown.",
+        "url": "https://themes.andrew.cmu.edu/docs-and-donner/",
+        "kind": "theme-site",
+        "eyebrow": "Site · MkDocs",
+        "image": "https://placemellon.andrew.cmu.edu/1040/656.svg?solid&text",
+        "alt": "Placeholder for Docs & Donner's home page.",
+        "repository": "",
+    },
+    {
+        "repo": "cmu-web-scaife-and-sound",
+        "name": "Scaife & Sound",
+        "description": "A Vaultwarden theme in CMU style, for its web vault.",
+        "url": "https://themes.andrew.cmu.edu/scaife-and-sound/",
+        "kind": "theme-app",
+        "eyebrow": "App · Vaultwarden",
+        "image": "https://placemellon.andrew.cmu.edu/1040/656.svg?solid&text",
+        "alt": "Placeholder for Scaife & Sound's home page.",
+        "repository": "",
+    },
 ]
 OUT = Path(__file__).resolve().parent.parent / "_data" / "projects.json"
 
