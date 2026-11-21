@@ -50,17 +50,17 @@ PLATFORMS = {
 # before their first push. Remove each one when its repository is public.
 COMING = [
     {
-        "repo": "cmu-web-cut-and-paste",
-        "name": "The Cut & Paste",
+        "repo": "cmu-web-cut-list",
+        "name": "The Cut List",
         "description": (
             "Banners, headers and icons for the tools you use at CMU, "
             "sized and cropped in CMU style."
         ),
-        "url": "https://cutandpaste.andrew.cmu.edu/",
+        "url": "https://cutlist.andrew.cmu.edu/",
         "kind": "tool",
         "eyebrow": "",
         "image": "https://placemellon.andrew.cmu.edu/1040/656.svg?solid&text",
-        "alt": "Placeholder for The Cut & Paste's home page.",
+        "alt": "Placeholder for The Cut List's home page.",
         "repository": "",
     },
     {

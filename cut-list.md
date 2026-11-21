@@ -1,18 +1,18 @@
 ---
-title: The Cut & Paste
-repo: cmu-web-cut-and-paste
+title: The Cut List
+repo: cmu-web-cut-list
 description: "Banners, headers and icons for the tools you use at CMU, sized and cropped in CMU style."
 nav_order: 5
 ---
 
-# The Cut & Paste
+# The Cut List
 
 <div class="cmu-split">
   <div>
     <p class="cmu-lead">Banners, headers and icons for the tools you use at CMU, sized and cropped in CMU style.</p>
-    <p><a class="btn" href="https://cutandpaste.andrew.cmu.edu/">Go to The Cut &amp; Paste</a></p>
+    <p><a class="btn" href="https://cutlist.andrew.cmu.edu/">Go to The Cut List</a></p>
   </div>
-  <figure class="cmu-shot cmu-shot--browser"><img src="https://placemellon.andrew.cmu.edu/1040/656.svg?solid&amp;text" alt="Placeholder for The Cut &amp; Paste's home page." width="1040" height="656"></figure>
+  <figure class="cmu-shot cmu-shot--browser"><img src="https://placemellon.andrew.cmu.edu/1040/656.svg?solid&amp;text" alt="Placeholder for The Cut List's home page." width="1040" height="656"></figure>
 </div>
 
 ## What It Does
@@ -28,4 +28,5 @@ nav_order: 5
 ## Who It's For
 
 Anyone setting up a shared drive, a form or another service for a CMU group.
-It's named for the Cut, the lawn at the center of campus.
+It's named for the Cut, the lawn at the center of campus, and a cut list,
+the list of exact sizes to cut.
