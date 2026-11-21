@@ -34,8 +34,10 @@ KINDS = {
     "cmu-web-tool": "tool",
     "cmu-web-theme-site": "theme-site",
     "cmu-web-theme-app": "theme-app",
+    "cmu-web-theme-document": "theme-document",
 }
-# A theme's eyebrow: Site or App, then its platform, from these topics
+# A theme's eyebrow: Site, App or Document, then its platform, from these
+# topics
 PLATFORMS = {
     "jekyll-theme": "Jekyll",
     "wordpress-theme": "WordPress",
@@ -45,7 +47,9 @@ PLATFORMS = {
     "mediawiki": "MediaWiki",
     "hugo-theme": "Hugo",
     "quarto": "Quarto",
+    "grouper": "Grouper",
 }
+PLACEHOLDER = "https://placemellon.andrew.cmu.edu/1040/656.svg?solid&text"
 # Temporary: projects without a public repository yet, so their cards can show
 # before their first push. Remove each one when its repository is public.
 COMING = [
@@ -59,7 +63,7 @@ COMING = [
         "url": "https://cutlist.andrew.cmu.edu/",
         "kind": "tool",
         "eyebrow": "",
-        "image": "https://placemellon.andrew.cmu.edu/1040/656.svg?solid&text",
+        "image": PLACEHOLDER,
         "alt": "Placeholder for The Cut List's home page.",
         "repository": "",
     },
@@ -70,7 +74,7 @@ COMING = [
         "url": "https://themes.andrew.cmu.edu/docs-and-donner/",
         "kind": "theme-site",
         "eyebrow": "Site · MkDocs",
-        "image": "https://placemellon.andrew.cmu.edu/1040/656.svg?solid&text",
+        "image": PLACEHOLDER,
         "alt": "Placeholder for Docs & Donner's home page.",
         "repository": "",
     },
@@ -81,8 +85,19 @@ COMING = [
         "url": "https://themes.andrew.cmu.edu/scaife-and-sound/",
         "kind": "theme-app",
         "eyebrow": "App · Vaultwarden",
-        "image": "https://placemellon.andrew.cmu.edu/1040/656.svg?solid&text",
+        "image": PLACEHOLDER,
         "alt": "Placeholder for Scaife & Sound's home page.",
+        "repository": "",
+    },
+    {
+        "repo": "cmu-web-tech-and-type",
+        "name": "Tech & Type",
+        "description": "LaTeX and Typst templates in CMU style, for letters and other documents.",
+        "url": "https://themes.andrew.cmu.edu/tech-and-type/",
+        "kind": "theme-document",
+        "eyebrow": "Document · LaTeX and Typst",
+        "image": PLACEHOLDER,
+        "alt": "Placeholder for Tech & Type's home page.",
         "repository": "",
     },
 ]
@@ -146,16 +161,18 @@ def project(repo, local):
         raise ValueError("it has no description or website on GitHub")
     raw = f"https://raw.githubusercontent.com/{ORG}/{repo['name']}/{repo['default_branch']}/"
     picture = re.search(r"\]\(((?!https?:)[^)\s]+\.(?:jpg|jpeg|png|webp))\)", text)
-    image, alt = "", f"{name}'s home page."
+    # Until a project's README has a picture, the same placeholder the coming
+    # projects use
+    image, alt = PLACEHOLDER, f"Placeholder for {name}'s home page."
     if picture:
         card = str(Path(picture.group(1)).parent / "cmu-web-preview.webp")
         image = raw + card if exists(raw + card) else raw + picture.group(1)
+        alt = f"{name}'s home page."
     eyebrow = ""
     if kind != "tool":
         platform = next((PLATFORMS[t] for t in repo["topics"] if t in PLATFORMS), "")
-        eyebrow = " · ".join(
-            filter(None, ["Site" if kind == "theme-site" else "App", platform])
-        )
+        label = {"theme-site": "Site", "theme-app": "App", "theme-document": "Document"}
+        eyebrow = " · ".join(filter(None, [label[kind], platform]))
     return {
         "repo": repo["name"],
         "name": name,
