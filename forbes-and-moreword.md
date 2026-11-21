@@ -4,14 +4,16 @@ description: "A WordPress theme in CMU style, with the Web Kilt's components rea
 nav_order: 6
 ---
 
+<p class="cmu-eyebrow">Site · WordPress</p>
+
 # Forbes & Moreword
 
 <div class="cmu-split">
   <div>
     <p class="cmu-lead">A WordPress theme in CMU style, with the Web Kilt's components ready to insert as patterns.</p>
-    <p><a class="btn" href="https://forbesandmoreword.andrew.cmu.edu/">Explore Forbes & Moreword</a></p>
+    <p><a class="btn" href="https://themes.andrew.cmu.edu/forbes-and-moreword/">Explore Forbes & Moreword</a></p>
   </div>
-  <figure class="cmu-shot cmu-shot--browser"><img src="https://forbesandmoreword.andrew.cmu.edu/images/cmu-web-preview.webp" alt="Forbes & Moreword's home page." width="1040" height="656"></figure>
+  <figure class="cmu-shot cmu-shot--browser"><img src="https://themes.andrew.cmu.edu/forbes-and-moreword/0/images/cmu-web-preview.webp" alt="Forbes & Moreword's home page." width="1040" height="656"></figure>
 </div>
 
 ## What It Does

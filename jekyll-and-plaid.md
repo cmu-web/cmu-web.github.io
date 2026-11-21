@@ -4,14 +4,16 @@ description: "A GitHub Pages theme that turns plain Markdown into pages in CMU s
 nav_order: 5
 ---
 
+<p class="cmu-eyebrow">Site · Jekyll</p>
+
 # Jekyll & Plaid
 
 <div class="cmu-split">
   <div>
     <p class="cmu-lead">A GitHub Pages theme that turns plain Markdown into pages in CMU style.</p>
-    <p><a class="btn" href="https://jekyllandplaid.andrew.cmu.edu/">Explore Jekyll & Plaid</a></p>
+    <p><a class="btn" href="https://themes.andrew.cmu.edu/jekyll-and-plaid/">Explore Jekyll & Plaid</a></p>
   </div>
-  <figure class="cmu-shot cmu-shot--browser"><img src="https://jekyllandplaid.andrew.cmu.edu/0/images/cmu-web-preview.webp" alt="Jekyll & Plaid's home page." width="1040" height="656"></figure>
+  <figure class="cmu-shot cmu-shot--browser"><img src="https://themes.andrew.cmu.edu/jekyll-and-plaid/0/images/cmu-web-preview.webp" alt="Jekyll & Plaid's home page." width="1040" height="656"></figure>
 </div>
 
 ## What It Does
