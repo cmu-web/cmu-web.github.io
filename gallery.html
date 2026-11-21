@@ -8,12 +8,11 @@ nav_secondary: true
 <div class="grid column3 grey boxes cmu-cards-links" id="gallery">
   <h1 class="sr-only">Gallery</h1>
   <p class="cmu-grid-full">
-    Carnegie Mellon sites and apps built with CMU Web. Each one is labeled with what it uses.
+    Carnegie Mellon sites and apps built with CMU Web. Each one is labeled as a content site or a web app, next to what it's built with.
   </p>
   {%- comment -%} Each project's gallery.json, merged by tools/gallery.py at build time {%- endcomment %}
   {%- for e in site.data.gallery %}
   <div id="{{ e.id | escape }}">
-    <p class="cmu-label">{{ e.project | escape }}</p>
     <figure class="cmu-shot cmu-shot--browser">
       {%- if e.image %}
       <a href="{{ e.url | escape }}" tabindex="-1" aria-hidden="true"
@@ -23,17 +22,21 @@ nav_secondary: true
       <img src="https://placemellon.andrew.cmu.edu/1040/656.svg?solid&amp;text" alt="{{ e.alt | escape }}" width="1040" height="656" loading="lazy" />
       {%- endif %}
     </figure>
-    <h2>{{ e.name | escape }}</h2>
+    <h2>
+      {{ e.name | escape }}
+      <span class="cmu-pills">
+        {%- for p in e.pills %}<span class="{{ p.class }}" title="{{ p.title | escape }}">{{ p.name | escape }}</span>{% endfor -%}
+      </span>
+    </h2>
     <p>{{ e.summary | escape }}</p>
     <p><a class="external" href="{{ e.url | escape }}">{{ e.link | escape }}</a>{% if e.login %} [login&nbsp;required]{% endif %}</p>
   </div>
   {%- endfor %}
   <div id="yours">
-    <p class="cmu-label">Web Kilt or Jekyll &amp; Plaid</p>
     <figure class="cmu-shot cmu-shot--browser">
       <img src="https://placemellon.andrew.cmu.edu/1040/656?scotty=recumbent&amp;question" alt="" width="1040" height="656" loading="lazy" />
     </figure>
-    <h2>Your Site or App Here</h2>
+    <h2>Your Site or App Here <span class="cmu-pills"><span class="cmu-pill" title="Built with whatever you built it with">???</span></span></h2>
     <p>
       Built a site with the Web Kilt or Jekyll &amp; Plaid, or spotted a QRnegie code on a poster?
       <a class="external" href="https://docs.google.com/forms/d/e/1FAIpQLSdSdq2bVAyNyiUcqXex-Kr686RGS4_4pn0liGEi0cI9y48wHg/viewform">Tell us about it</a> [login&nbsp;required], and we'll

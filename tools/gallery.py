@@ -2,8 +2,8 @@
 
 Each project lists the sites built with it in its docs/gallery.json (the
 format is in the Web Kilt's tools/gallery.mjs). This fetches each one, makes
-its image addresses absolute against the project's docs site, labels every
-entry with its project and writes the merged list, sorted by name, for
+its image addresses absolute against the project's docs site, gives each
+pill its classes and tooltip, and writes the merged list, sorted by name, for
 gallery.html. A project whose file can't be read is skipped with a warning,
 so one missing file never empties the gallery.
 
@@ -33,6 +33,18 @@ SOURCES = [
         "https://themes.andrew.cmu.edu/forbes-and-moreword/0/",
     ),
 ]
+# Every pill a card can have, with its classes and tooltip. Mirrors PILLS in
+# the Web Kilt's tools/gallery.mjs, which checks each project's file.
+PILLS = {
+    "CMS": ("cmu-pill cmu-pill--blue", "A content site"),
+    "App": ("cmu-pill cmu-pill--green", "A web app"),
+    "Cascade": ("cmu-pill cmu-pill--outline", "Built in Cascade"),
+    "HTML": ("cmu-pill cmu-pill--outline", "Hand-written HTML pages"),
+    "Jekyll": ("cmu-pill cmu-pill--outline", "Built with Jekyll on GitHub Pages"),
+    "Node": ("cmu-pill cmu-pill--outline", "A Node app"),
+    "Rails": ("cmu-pill cmu-pill--outline", "A Ruby on Rails app"),
+    "WordPress": ("cmu-pill cmu-pill--outline", "Built in WordPress"),
+}
 OUT = Path(__file__).resolve().parent.parent / "_data" / "gallery.json"
 
 
@@ -43,6 +55,21 @@ def load(repo, branch, local):
     url = f"https://raw.githubusercontent.com/cmu-web/{repo}/{branch}/docs/gallery.json"
     with urllib.request.urlopen(url, timeout=30) as response:
         return json.load(response)
+
+
+def pills(entry, repo):
+    """The entry's pills with their classes and tooltips; unknown ones dropped."""
+    known = []
+    for name in entry.get("pills", []):
+        if name not in PILLS:
+            print(
+                f"warning: {repo}: {entry.get('id')}: no pill named {name}",
+                file=sys.stderr,
+            )
+            continue
+        cls, title = PILLS[name]
+        known.append({"name": name, "class": cls, "title": title})
+    return known
 
 
 def sort_key(entry):
@@ -60,7 +87,7 @@ def main():
             print(f"warning: skipped {repo}: {error}", file=sys.stderr)
             continue
         for entry in entries:
-            entry = dict(entry, project=label)
+            entry = dict(entry, project=label, pills=pills(entry, repo))
             for field in ("image", "zoom"):
                 if entry.get(field):
                     entry[field] = urljoin(site, entry[field])
