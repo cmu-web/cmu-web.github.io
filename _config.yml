@@ -6,7 +6,10 @@ description: Plaid over IP
 url: https://cmu-web.github.io
 cmu:
   google_tag: GTM-N5HJLCRM
-  # Each project page links its own repository
+  # The menu ends with CMU Web on GitHub, the org
   github_link: false
+  nav_links:
+    - title: CMU Web on GitHub
+      url: https://github.com/cmu-web
   preview_alt: "The CMU Web home page: Plaid over IP, then Tools of the Trade, with screenshots of the Web Kilt, PlaceMellon, QRnegie and FencePost."
 exclude: [vendor, Gemfile, Gemfile.lock, README.md, tools]
